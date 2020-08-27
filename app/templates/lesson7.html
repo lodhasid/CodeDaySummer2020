@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Inline and Block Elements</title>
+    <link rel="stylesheet" href="/static/lessonsCSS.min.css">
+    <script src="/static/lesson.js"></script>
+    <link rel="icon" href="/static/fav-2.png" sizes="256x256" type="image/png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="header"><img class="home" src="/static/homeIcon.png" onclick="window.location = '/htmlTutorial'">
+        <h1>Inline vs Block Elements</h1>
+    </div>
+    <h3>What are They?</h3>
+    <h4>Inline vs Block: </h4>
+    <p>An inline element is an element that can go inside any other element. It does not start from a new line, and it shrinks
+        to the size of its content. However, block elements are the opposite: they cannot go inside inline elements, and they
+        always start on a newline. They also take up as much width as is available to them. An example of this is headers
+        (&lt;h1&gt; - &lt;h6&gt;). Headers always start on a newline, and they take up the entire width of the page. An
+        example of an inline element is the link (&lt;a&gt;) element. It can go inside any element, and it does not take up
+        any more space than it needs to.
+    </p>
+    <h4>Divs and Spans</h4>
+    <p>The &lt;div&gt; tag is a block element often used for grouping different elements, and is often used for applying
+        styles to them or to itself. Really, it is just a block element that can have any content inside it.
+    </p>
+    <p>&lt;span&gt; tags are inline and are usually used to select part of the text content of an element and do something to it, such as applying a style to it.<br><br>Here is an example:</p>
+    <pre><code id="divsSpans"><span class="hidden">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;HTML Example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+</span>
+&lt;div style="background-color: lightblue;padding: 10px"&gt;
+    &lt;h1&gt;This is a header&lt;/h1&gt;
+    &lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;/div&gt;&lt;br&gt;
+
+&lt;p&gt;Here is some text in a span element: &lt;span style="color: blue"&gt;Blue text blue text blue text...&lt;/span&gt;&lt;/p&gt;<span class="hidden">
+
+&lt;/body&gt;
+&lt;/html&gt;</span>
+
+</code></pre>
+    <button onclick="goToEditor($('#divsSpans').text())">See Result</button><br>
+    <br><button onclick="window.location = '/lessons?num=p'">Previous</button><button onclick="window.location = '/lessons?num=n'" style="float: right">Next</button>
+</body>
+
+</html>

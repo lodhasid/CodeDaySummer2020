@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Attributes</title>
+    <link rel="stylesheet" href="/static/lessonsCSS.min.css">
+    <script src="/static/lesson.js"></script>
+    <link rel="icon" href="/static/fav-2.png" sizes="256x256" type="image/png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="header"><img class="home" src="/static/homeIcon.png" onclick="window.location = '/htmlTutorial'">
+        <h1>HTML Attributes</h1>
+    </div>
+    <h3>What is an attribute?</h3>
+    <p>An HTML attribute gives additional information about an element. An element's attributes go in between the tag name
+        and the &gt; sign:<br> &lt;<em>tagName</em> attribute="value"&gt;content&lt;/<em>tagName</em>&gt;<br><br>
+        If an element has multiple attributes, then they are separated by spaces. <br><br>
+        An example of an attribute is the title attribute. Almost all elements visible on the page have a title attribute.
+        When you hover over an element, it displays the text in the title attribute as a tooltip. Here's an example:
+    </p>
+    <pre><code id="attrCode"><span class="hidden">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;HTML Example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+</span>
+&lt;p title="This is in the title attribute"&gt;Hover over me!&lt;/p&gt;<span class="hidden">
+
+&lt;/body&gt;
+&lt;/html&gt;</span>
+
+</code></pre>
+    <button onclick="goToEditor($('#attrCode').text())">See Result</button><br>
+    <p>Another example of attributes are the class and id attributes. Classes are used to classify elements with a class name, and the id attribute gives an element a unique id. They are useful for JavaScript and <a href="/cssTutorial">CSS</a>.</p>
+    <br><button onclick="window.location = '/lessons?num=p'">Previous</button><button onclick="window.location = '/lessons?num=n'" style="float: right">Next</button>
+</body>
+
+</html>

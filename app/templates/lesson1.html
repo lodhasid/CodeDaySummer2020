@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Intro to HTML</title>
+    <link rel="stylesheet" href="/static/lessonsCSS.min.css">
+    <script src="/static/lesson.js"></script>
+    <link rel="icon" href="/static/fav-2.png" sizes="256x256" type="image/png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="header"><img class="home" src="/static/homeIcon.png" onclick="window.location = '/htmlTutorial'">
+        <h1>Introduction to <em>HTML</em></h1>
+    </div>
+    <h3>What is <em>HTML?</em></h3>
+    <p> <em>HTML</em> stands for <strong>H</strong>yper<strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage. It is a coding language that is used to create webpages.
+        <br>
+        In fact, it was used to create this tutorial! Here is an example of some basic html. Click "See Result" to see how it looks on a webpage: <br><br></p>
+    <pre><code id="example">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+   &lt;style&gt;
+       h1 {
+           background: yellow;
+       }
+   &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;h1&gt;My Webpage&lt;/h1&gt;
+   &lt;br&gt;
+   &lt;p style="color:blue"&gt;Here is some blue text.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+        </code></pre>
+    <p>
+        <button onclick="goToEditor($('#example').text())">See Result</button>
+        <br><br><br> In this
+        tutorial you will learn how to create webpages with <em>HTML</em>!
+
+        Have Fun!</p>
+    <button onclick="window.location = '/lessons?num=n'" style="float: right">Next</button>
+</body>
+
+</html>

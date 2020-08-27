@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/lessonsCSS.min.css">
+    <script src="/static/lesson.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="icon" href="/static/favicon.png" sizes="256x256" type="image/png">
+    <title>CSS Padding, Border, and Margins</title>
+</head>
+
+<body>
+    <div class="header"><img class="home" src="/static/homeIcon.png" onclick="window.location = '/cssTutorial'">
+        <h1>CSS Padding, Border, and Margins</h1>
+    </div>
+    <h3>What are they?</h3>
+    <h4>Borders</h4>
+    <p>An element's border can be specified with CSS. You can specify each side of an element's border with these CSS properties: </p>
+    <ul>
+        <li>border-left</li>
+        <li>border-right</li>
+        <li>border-top</li>
+        <li>border-bottom</li>
+    </ul>
+    <p>Or, if you want them all to be the same, you can just use the border property. <br><br> The values for each of these properties is in the form "units type color". For example, "border: 2px dashed green" would create a green dashed border 2 pixels wide, and "border: 3mm solid blue" would create a solid blue border 3 millimeters wide.</p>
+    <h4>Padding</h4>
+    <p>Padding is space around the content of an element. Padding is inside the element's border. The padding property's value is like this: "up right down left" where each one of those is the padding, in any units, on that side of the element. If the padding is the same on all sides, then it can just be written like this: "padding: units", where units is the padding on all sides.<br><br> For example, "padding: 5px" would make five pixels of space between an element's content and its border. "padding: 5mm 2mm 5mm 2mm" would make 5 millimeters of space on the top and bottom, and 2 millimeters of space on the left and right.</p>
+    <h4>Margins</h4>
+    <p>Margin is the space around an element, outside of its border. The margin property's value is written the same way as the padding property's.<br><strong>Note: </strong> The background or size of an element will not include the margin.<br><br>Around the content of an element, the three CSS properties would look like this: </p><br>
+    <div style="text-align: center">
+        <img src="/static/boxmodel.jpg" width="50%" style="margin: auto; border: 3px solid black"><br><br></div>
+    <p>Here is an example of these 3 properties:</p>
+    <pre><code id="boxModelExample"><span class="hidden">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;CSS Example&lt;/title&gt;</span>
+    &lt;style&gt;
+        #boxA {
+            padding: 20px;
+            border: 5px dotted blue;
+            margin: 50px;
+            background-color: yellow;
+        }
+        
+        #boxB {
+            padding: 5px;
+            border: 3px solid yellow;
+            margin: 5mm 0px 0px 0px;
+            background-color: lightblue
+        }
+    &lt;/style&gt;<span class="hidden">
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;p id="boxA"&gt;Paragraph&lt;/p&gt;
+&lt;p&gt;Paragraph&lt;/p&gt;
+&lt;p id="boxB"&gt;Paragraph&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</span>
+        </code></pre>
+    <button onclick="goToEditor($('#boxModelExample').text())">See Result</button><br><br>
+    <button onclick="window.location = '/cssLessons?num=p'" style="float: left">Previous</button><button onclick="window.location = '/cssLessons?num=n'" style="float: right">Next</button>
+</body>

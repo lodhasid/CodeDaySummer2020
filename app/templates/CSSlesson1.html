@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/lessonsCSS.min.css">
+    <script src="/static/lesson.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>What is CSS?</title>
+    <link rel="icon" href="/static/favicon.png" sizes="256x256" type="image/png">
+</head>
+
+<body>
+    <div class="header"><img class="home" src="/static/homeIcon.png" onclick="window.location = '/cssTutorial'">
+        <h1>What is CSS?</h1>
+    </div>
+    <h3>Cascading Style Sheets</h3>
+    <p>CSS stands for Cascading Style Sheets. It is a way to style HTML elements. There are 3 ways to write CSS: inline, internal, and external. This lesson will go over these 3 ways.</p>
+    <h4>Inline CSS</h4>
+    <p>This type of CSS was briefly explained in our <a href="/lessons?num=6" target="_blank">HTML Tutorial</a>. It is written as an HTML attribute called style. Inside the style attribute, you put your CSS. For example:<br>
+    </p>
+    <pre><code>
+&lt;p style="<em style="font-family: monospace">Your CSS Here</em>">Paragraph&lt;/p>
+    </code></pre>
+    <h4>Internal CSS</h4>
+    <p>This type of CSS is more common and is easier to use. For this type of CSS, you need to put a &lt;style&gt; tag inside the &lt;head&gt; tag. Your CSS goes inside the style tag. It would look something like this:<br> <br></p>
+    <pre><code>
+&lt;head&gt;
+&lt;style&gt;
+    <em style="font-family: monospace">Your CSS Here</em>
+&lt;/style&gt;
+&lt;/head&gt;
+
+</code></pre>
+    <h4>External CSS</h4>
+    <p>External CSS uses a .css file with your css in it. And you need a &lt;link&gt; tag inside the &lt;head&gt; tag of your html document. The link tag is empty and must have attributes rel="stylesheet" and href="<em>URL</em>". <em>URL</em> is the URL to your .css file. Here's how it would look: <br><br>myCSS.css: </p>
+    <pre><code id='tagExamples'>
+Your CSS Here
+    </code></pre>
+    <p>myWebpage.html: </p>
+    <pre><code id='tagExamples'>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;HTML Example&lt;/title&gt;
+    <span style="color: #0000bc;font-family: monospace">&lt;link rel="stylesheet" href="myCSS.css"&gt;</span>
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;This could be styled in myCSS.css&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+</code></pre>
+    <p>There are advantages and disadvantages to each of these ways, which you can see <a href="/cssLessons?num=8">here</a>. In this tutorial, all examples will be written using internal CSS.</p>
+    <button onclick="window.location = '/cssLessons?num=n'" style="float: right">Next</button>
+</body>
+
+</html>

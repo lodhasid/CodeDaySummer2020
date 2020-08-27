@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Basic HTML</title>
+    <link rel="stylesheet" href="/static/lessonsCSS.min.css">
+    <script src="/static/lesson.js"></script>
+    <link rel="icon" href="/static/fav-2.png" sizes="256x256" type="image/png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <div class="header"><img class="home" src="/static/homeIcon.png" onclick="window.location = '/htmlTutorial'">
+        <h1>Basic <em>HTML</em></h1>
+    </div>
+    <h3><em>HTML</em> Tags</h3>
+    <p>Things you write in <em>HTML</em> are called tags. Almost all<em> HTML</em> tags look like this: <br><br> &lt;<em>tagName </em>attributes&gt;<em>content</em>&lt;/<em>tagName</em>&gt;<br><br>Or if there is no content: <br>&lt;<em>tagName </em>attributes /&gt;<br><br> <em>TagName</em> is the name of the <em>HTML</em> element. &lt;<em>tagName</em> attributes&gt; is called the opening tag, and &lt;/<em>tagName</em>&gt; is the closing tag. Anything in between is the content. Content can just be text, or it can be element(s). <em>HTML</em> Attributes will be covered in the next lesson.
+        <br><br>
+        This lesson will be about basic <em>HTML</em> tags:</p><br>
+
+    <h4><em>HTML</em> Documents</h4>
+    <p>An html document is made with a .html file: </p>
+    <p>Every <em>HTML</em> document starts with a Document Type declaration: <strong>&lt;!DOCTYPE html&gt;</strong>. This is NOT A TAG. You do not need to have &lt;/!DOCTYPE html&gt; at the end of your file.</p>
+    <p>After that, the entire document must be inside a <strong>&lt;html&gt;</strong> tag.</p>
+    <p>There must also be a <strong>&lt;head&gt;</strong> tag inside the &lt;html&gt; tag. This contains additional data about the document. Inside the &lt;head&gt; tag, there should be a &lt;title&gt; tag. This is the title of your webpage, and is displayed at the top of the browser tab: </p>
+    <img src="/static/title.png" height="100">
+    <p>Inside the &lt;html&gt; tag, usually after the &lt;head&gt;, there must be a <strong>&lt;body&gt;</strong>. This contains all visible content. Anything outside the &lt;body&gt; tag will NOT be visible.<br><br></p><br>
+    <h4><em>HTML</em> Headers and Paragraphs</h4>
+    <p> The header tag makes headings and looks like this: &lt;h<em>#</em>&gt;. <em>#</em> is a number that is the size of the header. For example, &lt;h1&gt; makes the biggest heading:</p>
+    <h1 style="font-family: initial; background: initial; padding:initial; text-align: initial">This is Header 1</h1>
+    <p>
+        <br>
+        &lt;h2&gt; makes a smaller heading.
+        <br>
+        &lt;h3&gt; makes a even smaller heading. <br>&lt;h6&gt; is the smallest:</p>
+    <h6 style="font-family: initial">This is Header 6</h6>
+    <p>The &lt;p&gt; tag makes a paragraph that you can write lots of text in. The &lt;p&gt; tag was used to write this very text! <br><br> You can use the &lt;br&gt; tag to create a newline. This element is empty--it has no content--so it does not need a closing tag.
+    </p>
+    <h4>Example of <em>HTML</em> tags:</h4>
+    <pre><code id='tagExamples'>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;HTML Example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;This is Header 1&lt;/h1&gt;
+    &lt;h2&gt;This is Header 2&lt;/h2&gt;
+    &lt;h3&gt;This is Header 3&lt;/h3&gt;
+    &lt;h4&gt;This is Header 4&lt;/h4&gt;
+    &lt;h5&gt;This is Header 5&lt;/h5&gt;
+    &lt;h6&gt;This is Header 6&lt;/h6&gt;
+    &lt;p&gt;This is a paragraph&lt;br&gt;and this is a newline&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+</code></pre>
+    <button onclick="goToEditor($('#tagExamples').text())">See Result</button>
+    <br><br>
+    <button onclick="window.location = '/lessons?num=p'">Previous</button><button onclick="window.location = '/lessons?num=n'" style="float: right">Next</button>
+
+</body>
+
+</html>

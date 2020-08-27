@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive HTML</title>
+    <link rel="stylesheet" href="/static/lessonsCSS.min.css">
+    <script src="/static/lesson.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="icon" href="/static/fav-2.png" sizes="256x256" type="image/png">
+    <style>
+    </style>
+</head>
+
+<body>
+    <div class="header"><img class="home" src="/static/homeIcon.png" onclick="window.location = '/htmlTutorial'">
+        <h1>Interactive HTML</h1>
+    </div>
+    <h3>Links and Buttons</h3>
+    <h4>Links</h4>
+    <p>The &lt;a&gt; tag is used to create links. It has a attribute called href, which is the url of the page that it links to. Inside the content of the link, you write the text that the browser will display. For example, &lt;a href="https://google.com"&gt;Link To Google&lt;/a&gt; makes this: <a href="https://google.com">Link To Google</a></p>
+    <p>The link also has a target attribute. This specifies where you want the page to open. If you want the link to open in a new tab, you must set target="_blank". Here's an example: &lt;a href="https://google.com" target="_blank"&gt;Link to Google&lt;/a&gt; does this: <a href="https://google.com" target="_blank">Link to Google</a></p>
+    <br>
+    <h4>Button</h4>
+    <p>
+        Next, lets talk about the &lt;button&gt; tag, which is exactly what it sounds like: a button! The button tag has a type attribute, which specifies what kind of button it is.<br>
+        The default attribute value is button. This is a list of type attributes: <br>
+    </p>
+    <ul>
+        <li>type="button". This is the default value and it does not have any special properties.</li>
+        <li>type="submit". A submit button can be put inside a form, and when it is clicked on, the form is submitted. Read more about forms <a>here</a>.</li>
+        <li>type="reset". A reset button can also be put in a form to reset all its input values. Learn more <a>here</a></li>
+    </ul>
+    <p>The button element also has an onclick attribute. This contains some JavaScript to execute when the button is clicked. You can learn JavaScript <a href="https://w3schools.com/js/" target="_blank">here</a>.<br><br> Here's an example of a button</p>
+    <pre><code id="buttonExample"><span class="hidden">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;HTML Example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;</span>
+&lt;p&gt;Click the Button&lt;/p&gt;
+
+&lt;button onclick="document.getElementsByTagName('p')[0].innerHTML = 
+'Isn\'t that cool!'"&gt;Click Here!&lt;/button&gt;<span class="hidden">
+&lt;/body&gt;
+&lt;/html&gt;</span>
+
+</code></pre><button onclick="goToEditor($('#buttonExample').text())">See Result</button><br>
+    <button onclick="window.location = '/lessons?num=p'">Previous</button><button onclick="window.location = '/lessons?num=n'" style="float: right">Next</button>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/lessonsCSS.min.css">
+    <script src="/static/lesson.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="icon" href="/static/favicon.png" sizes="256x256" type="image/png">
+    <title>CSS Selectors</title>
+</head>
+
+<body>
+    <div class="header"><img class="home" src="/static/homeIcon.png" onclick="window.location = '/cssTutorial'">
+        <h1>CSS Selectors</h1>
+    </div>
+    <h3>What are CSS Selectors?</h3>
+    <p>A CSS selector is some text that can select specific HTML elements from a document. Here are some things you can select with CSS selectors: </p>
+    <ul>
+        <li>Elements with specified tag name: "<em>tagName</em>"</li>
+        <li>Element with specified id: "<em>#id</em>"</li>
+        <li>Elements with specified class: "<em>.class</em>"</li>
+        <li>Element inside specified element: "<em>parentSelector childrenSelector</em>"</li>
+        <li>Element with specified attribute: "<em>[attr="value"]</em>"</li>
+        <li>Element in specified element state: ":state"</li>
+        <li>Everything: "*"</li>
+    </ul>
+    <p>So the CSS selector "#header" would select the element with id header. And ".myClass p" would select all &lt;p&gt; tags inside an element with class myClass. An example of using these in actual CSS would look like this: </p>
+    <pre><code id="CSSexample1"><span class="hidden">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;CSS Example&lt;/title&gt;</span>
+    &lt;style&gt;
+        <span style="color:#0000bc;font-family: monospace">#header</span> {
+            color: blue;
+        }
+        
+        <span style="color: #0000bc;font-family: monospace">.myClass p</span> {
+            font-size: 30px;
+        }
+    &lt;/style&gt;<span class="hidden">
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;p id=&quot;header&quot;&gt;This has id header so it is blue&lt;/p&gt;
+&lt;h1&gt;This does not have id header&lt;/h1&gt;&lt;br&gt;
+
+&lt;div class=&quot;myClass&quot;&gt;
+    &lt;p&gt;This is a paragraph inside an element with class myClass&lt;/p&gt;
+    &lt;h5&gt;And this is not a paragraph&lt;/h5&gt;
+&lt;/div&gt;
+
+&lt;p&gt;And this is not inside an element with class myClass&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</span>
+
+</code></pre><button onclick="goToEditor($('#CSSexample1').text())">See Result</button><br>
+    <p>You can also combine multiple selectors, for example: "h1.header" would select only elements that were &lt;h1&gt; tags and had class "header", and "div p[title="paragraph"]" would select all paragraphs with the attribute title="paragraph" that are inside a &lt;div&gt; element. Here's an example: </p>
+    <pre><code id="CSSexample2"><span class="hidden">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;CSS Example&lt;/title&gt;</span>
+    &lt;style&gt;
+        <span style="color:#0000bc;font-family: monospace">h1.header</span> {
+            padding: 20px;
+            background-color: lightblue;
+        }
+        
+        <span style="color: #0000bc;font-family: monospace">div p[title="paragraph"]</span> {
+            font-family: impact;
+        }
+    &lt;/style&gt;<span class="hidden">
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;p class=&quot;header&quot;&gt;This has class header but is not an h1 tag&lt;/p&gt;
+&lt;h1&gt;This doesn&apos;t have class header&lt;/h1&gt;
+&lt;h1 class=&quot;header&quot;&gt;This is an h1 with class=&quot;header&quot;&lt;/h1&gt;&lt;br&gt;
+
+&lt;p title=&quot;paragraph&quot;&gt;This is not in a div&lt;/p&gt;
+&lt;div&gt;
+    &lt;p title=&quot;paragraph&quot;&gt;This is a p tag with title paragraph that is inside a div&lt;/p&gt;
+    &lt;p&gt;This doesn&apos;t have title=&quot;paragraph&quot; so it will not be styled&lt;/p&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</span>
+
+</code></pre><button onclick="goToEditor($('#CSSexample2').text())">See Result</button>
+    <p>You will see a lot more examples of selectors in the next few lessons.</p>
+    <button onclick="window.location = '/cssLessons?num=p'" style="float: left">Previous</button><button onclick="window.location = '/cssLessons?num=n'" style="float: right">Next</button>
+</body>

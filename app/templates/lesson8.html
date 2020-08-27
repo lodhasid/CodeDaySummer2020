@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML forms</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/lessonsCSS.min.css">
+    <script src="/static/lesson.js"></script>
+    <link rel="icon" href="/static/fav-2.png" sizes="256x256" type="image/png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="header"><img class="home" src="/static/homeIcon.png" onclick="window.location = '/htmlTutorial'">
+        <h1>HTML Forms</h1>
+    </div>
+    <h3>Inputting data with forms</h3>
+    <p>
+        Did you know that there is a &lt;form&gt; tag? The form tag creates a new form for inputting user data to the server. <br> <br>
+        The &lt;form&gt; tag has an attribute called action. This is the url where the form should be sent. It must also have an attribute called method. This should <strong>always</strong> be set to method="POST"<br> <strong>Note: </strong> this tutorial
+        will not explain how the server processes form data.<br><br> In the form content, you must put input tags. These are
+        how the user inputs data.
+    </p>
+    <p>
+        An input tag should just be a empty tag with an attribute called type. This specifies what kind of input you want
+        the user to enter. Here are some of the important input types:
+    </p>
+    <ul>
+        <li>text (default value)</li>
+        <li>password</li>
+        <li>submit</li>
+        <li>reset</li>
+        <li>range</li>
+        <li>radio</li>
+        <li>checkbox</li>
+        <li>file</li>
+    </ul>
+    <p><br>Type="text" makes a text box where the user can input some data<br><br>
+        Type="password" makes a text box, but it will replace the text with dots so that you can't actually see it<br><br>
+        Type="radio" makes a multiple-choice input<br><br>
+        Type="checkbox" makes a checkbox that the user can check or uncheck.<br><br>
+        Type="file" makes a button that will allow the user to input a file.<br><br>
+        Type="range" has attributes min and max, which are numbers, and creates a slider that can move from the min to the max values.<br><br>
+        Type="submit" creates a button which submits the form to the server at URL in the form's action attribute. Type="submit" can also be used in a &lt;button&gt; element; it does the same thing when inside a form (see <a href="/lessons?num=4">lesson 4</a>).<br><br>
+        Type="reset" creates a button which resets all other input tags to their default value. Type="reset" can also be used in a &lt;button&gt; element; it does the same thing when inside a form (see <a href="/lessons?num=4">lesson 4</a>).<br><br>
+        All input tags must have a name attribute and a value attribute. The value attribute will change depending on what the user inputs. When the form is submitted, each input will be sent to the server as name=value, name is the name attribute, and value is the user input or default value. <br><br>Inputs can also have a required attribute. This is an empty attribute, it does not need a value. But if it is included, the form will only submit when its input tag is filled out.<br><br>
+        Forms can have other tags as well, like paragraph tags to add labels to the inputs. Here is an example:
+    </p>
+    <pre><code id="formCode"><span class="hidden">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;HTML Example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+</span>
+&lt;form action="/formdata" method="POST"&gt;<span class="hidden">
+    
+    &lt;p&gt; Text and passwords are easy to make. The name should explain what the input is for, and the value is the default value in the text box: &lt;/p&gt;
+    </span>
+    Username: &lt;input type="text" name="usr" value="username" required&gt;&lt;br&gt;&lt;br&gt;
+    Password: &lt;input type="password" name="pswd" required&gt;&lt;br&gt;&lt;br&gt;<span class="hidden">
+    
+    &lt;p&gt; Radio inputs are more complicated. They must have the same name, but different values. Whichever one is selected's value is sent to the server. The value is not displayed on the page, so you must write it seperately: &lt;/p&gt;
+    </span>
+    &lt;p&gt;&lt;strong&gt;Favorite color: &lt;/strong&gt;&lt;/p&gt;
+    &lt;input type="radio" name="color" value="red"&gt; Red &lt;br&gt;
+    &lt;input type="radio" name="color" value="orange"&gt; Orange &lt;br&gt;
+    &lt;input type="radio" name="color" value="yellow"&gt; Yellow&lt;br&gt;
+    &lt;input type="radio" name="color" value="green"&gt; Green &lt;br&gt;
+    &lt;input type="radio" name="color" value="blue"&gt; Blue &lt;br&gt;
+    &lt;input type="radio" name="color" value="purple"&gt; Purple &lt;br&gt;&lt;br&gt;
+    &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;<span class="hidden">
+
+&lt;/body&gt;
+&lt;/html&gt;</span>
+
+</code></pre>
+    <button onclick="goToEditor($('#formCode').text())">See Result</button><br>
+    <br><button onclick="window.location = '/lessons?num=p'">Previous</button>
+</body>
+
+</html>

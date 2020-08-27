@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS text styling</title>
+    <script src="/static/lesson.js"></script>
+    <link rel="stylesheet" href="/static/lessonsCSS.min.css">
+    <link rel="icon" href="/static/favicon.png" sizes="256x256" type="image/png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="header"><img class="home" src="/static/homeIcon.png" onclick="window.location = '/cssTutorial'">
+        <h1>CSS text styling</h1>
+    </div>
+    <h3>Fonts and Colors</h3>
+    <p>
+        To style text, there are many CSS properties you can use:
+    </p>
+    <ul>
+        <li>font: <em>size font</em>;</li>
+        <li>color: <em>color</em>;</li>
+        <li>font-weight: <em>bold, light</em>;</li>
+        <li>text-decoration: <em>type decorations</em>;</li>
+        <li>-webkit-text-stroke: <em>size color</em>;</li>
+        <li>font-variant: <em>small-caps, all-small-caps, or none</em>;</li>
+        <li>text-shadow: <em>x-offset y-offset blur-size color</em>;</li>
+        <li>text-align: <em>center, left, or right</em>;</li>
+    </ul>
+    <p>The font property changes the font of some text. An example of its value could be "20px Arial". <br><strong>Note: </strong>
+        If the font name has spaces in it, like Comic Sans MS, then you must put it in quotes.
+        <br><br>
+        The color property changes the color of text. Its value can be in these forms: rgb(), rgba(), hsl(), hsla(), color name,
+        or hex format (see <a href="/cssLesson?num=8">CSS colors</a>). For example, its value could be "rgb(0, 179, 7)". <br>
+        <br>
+        The font-weight property can change the boldness of text; its values can be either "bold" or "light".<br><br>
+
+        The text-decoration can make an underline, overline, or line through the text. And it can be normal, dotted, double, dashed or wavy.
+        If you wanted to make a double underline, you would just write <span style="text-decoration: double underline">
+            "text-decoration: double underline"</span> . And if you wanted to make
+        a dotted underline AND overline, then you would put <span style="text-decoration: dotted underline overline">
+            "text-decoration: dotted underline overline".</span>
+        <br><br>
+        -webkit-text-stroke makes a border of the text, in the form "size color".<br> For example "-webkit-text-stroke: 2px red"
+        would make a 2 pixel wide red border around the text.<br><br>
+
+        The font-variant property makes text have small caps. The "small-caps" value makes all the lowercase letters small caps
+        the uppercase letters regular caps. And the "all-small-caps" value makes ALL letters small caps. The value of "none"
+        makes all the letters normal.<br><br>
+        "text-shadow" makes a shadow of the text. It is written like this: "x-offset y-offset blur-size color". So "5px 5px
+        3px blue" would make this a <span style="text-shadow: 5px 5px 3px blue">blue shadow 5 pixels right and down from
+            the text, blurred slightly.</span>
+
+        <br><br>
+        And finally, text-align. This aligns the text to either <br>
+        <p>
+            <div>text-align: left</div><br>
+            <div style="text-align: center">text-align: center</div><br>
+            <div style="text-align:right">or text-align: right</div><br>
+            <p>Here's an example of some styled text:</p>
+            <pre><code id="exampleText"><span class="hidden">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;head&gt;</span>
+&lt;style&gt;
+    h1#styled {
+        font: 50px Arial;
+        font-weight: bold;
+        -webkit-text-stroke: 2px yellow;
+        text-shadow: 7px 7px 8px rgb(90, 90, 90);
+    }
+&lt;/style&gt;
+&lt;head&gt;
+<span class="hidden">
+&lt;body&gt;
+    &lt;h1 id="styled"&gt;Styled Text&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</span>
+</code></pre><button onclick="goToEditor($('#exampleText').text())">See Result</button><br><br>
+            <button onclick="window.location = '/cssLessons?num=p'" style="float: left">Previous</button><button onclick="window.location = '/cssLessons?num=n'" style="float: right">Next</button>
+            <p></p>
+</body>
+
+</html>

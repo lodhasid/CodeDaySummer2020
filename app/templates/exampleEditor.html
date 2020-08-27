@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="/static/editorCSS.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/static/exampleEditor.js"></script>
+    <title>Example Editor</title>
+</head>
+
+<body>
+    <div id="buttons"><button onclick="run()">Run ▶</button></div>
+    <div id="cont">
+
+        <div id="editor-cont">
+            <textarea id="editor">{{codeDefault}}</textarea>
+        </div>
+        <div id="result">
+            <iframe id="resultContent"></iframe>
+        </div>
+    </div>
+</body>
+
+</html>

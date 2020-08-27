@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS backgrounds</title>
+    <script src="/static/lesson.js"></script>
+    <link rel="stylesheet" href="/static/lessonsCSS.min.css">
+    <link rel="icon" href="/static/favicon.png" sizes="256x256" type="image/png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="header"><img class="home" src="/static/homeIcon.png" onclick="window.location = '/cssTutorial'">
+        <h1>CSS Backgrounds</h1>
+    </div>
+    <h3>Background Colors and Images</h3>
+    <h4>Background Colors</h4>
+    <p>
+        Creating background colors in CSS is very simple. The property is just: <br>
+        background-color: <em>color</em>; <br>
+        Here's an example: </p>
+    <pre><code id="bgcolor"><span class="hidden">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+&lt;title&gt;CSS Example&lt;/title&gt;</span>
+&lt;style&gt;
+    body {
+        background-color: #448844;
+    }
+    
+    h1 {
+        background-color: lightyellow;
+        padding: 7px
+    }
+&lt;/style&gt;<span class="hidden">
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;h1&gt;This is a header&lt;/h1&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</span>
+    </code></pre><button onclick="goToEditor($('#bgcolor').text())">See Result</button>
+    <h4>Background Images</h4>
+    <p>
+        Creating background images is also very easy. The CSS property is:<br>
+        background-image: <em>url("Image URL")</em>; <br></p>
+    <pre><code id="bgimg"><span class="hidden">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+&lt;title&gt;CSS Example&lt;/title&gt;</span>
+&lt;style&gt;
+    body {
+        background-image: url("/static/bgImage.jpg");
+    }
+    
+    h1 {
+        background-color: lightyellow;
+        padding: 7px
+    }
+&lt;/style&gt;<span class="hidden">
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;h1&gt;This is a header&lt;/h1&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</span>
+    </code></pre><button onclick="goToEditor($('#bgimg').text())">See Result</button>
+    <p>
+        However, this makes the image keep its original size. It went past the bottom of the page, and it did not go all the way to the right. This causes the background image to repeat in the unfilled space.<br><br> We can set a CSS property called background-size to fix this. <br><br>
+        There are three different ways to do this. <br><br>
+        "background-size: 100vw 100vh", which sets the width and height to the screen width and height. This makes the image stretch/shrink to fit the screen:
+    </p>
+    <pre><code id="bgsize100"><span class="hidden">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+&lt;title&gt;CSS Example&lt;/title&gt;
+&lt;style&gt;</span>
+    body {
+        background-image: url("/static/bgImage.jpg");
+        background-size: 100vw 100vh;
+    }<span class="hidden">
+    
+    h1 {
+        background-color: lightyellow;
+        padding: 7px
+    }
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;h1&gt;This is a header&lt;/h1&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</span>
+    </code></pre><button onclick="goToEditor($('#bgsize100').text())">See Result</button>
+    <p>
+        background-size: contain, which causes the background to shrink to fit in the page, but still repeats some parts. To make it not repeat, put background-repeat: no-repeat:
+    </p>
+    <pre><code id="bgsizeCont"><span class="hidden">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+&lt;title&gt;CSS Example&lt;/title&gt;
+&lt;style&gt;</span>
+    body {
+        background-image: url("/static/bgImage.jpg");
+        background-size: contain;
+    }<span class="hidden">
+    
+    h1, p {
+        background-color: lightyellow;
+        padding: 7px
+    }
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;h1&gt;This is a header&lt;/h1&gt;
+&lt;p&gt;Try adding "background-repeat: no-repeat;" to the body's CSS&lt;/p&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</span>
+    </code></pre><button onclick="goToEditor($('#bgsizeCont').text())">See Result</button>
+    <p>background-size: cover which shrinks/expands image to cover the full page, cutting out some parts:</p>
+    <pre><code id="bgCover"><span class="hidden">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+&lt;title&gt;CSS Example&lt;/title&gt;
+&lt;style&gt;</span>
+    body {
+        background-image: url("/static/bgImage.jpg");
+        background-size: cover;
+    }<span class="hidden">
+    
+    h1 {
+        background-color: lightyellow;
+        padding: 7px
+    }
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;h1&gt;This is a header&lt;/h1&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</span>
+    </code></pre><button onclick="goToEditor($('#bgCover').text())">See Result</button>
+</body>
+
+</html>

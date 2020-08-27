@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HTML styles</title>
+    <link rel="stylesheet" href="/static/lessonsCSS.min.css">
+    <script src="/static/lesson.js"></script>
+    <link rel="icon" href="/static/fav-2.png" sizes="256x256" type="image/png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="header"><img class="home" src="/static/homeIcon.png" onclick="window.location = '/htmlTutorial'">
+        <h1>HTML styles</h1>
+    </div>
+    <h3>Styling HTML Elements</h3>
+    <p>Did you know that you can style HTML elements to make them look better? Just look at the heading on the top
+        of the page and imagine if it looked like this: </p>
+    <h1 style="background:initial;font-family:initial;text-align: initial">HTML Styles</h1>
+    <p>
+        Looks terrible, right? Well, to make elements look better,
+        you just have to add a style attribute to the element and set it equal to
+        a list of style property-value pairs. It looks like this: <br><br>
+        style="<em>property: value; property2: value2; property3: value 3..." </em>
+        <br><br>
+        The <strong>color:</strong> <em>color</em> property changes the color of text.<br><br>
+        The <strong>background-color:</strong> <em>color</em> property changes the color of the background of an element. <br><br>
+        The <strong>font-family:</strong> <em>font</em> property specifies the font of an element. <br><br>
+        The <strong>font-size:</strong> <em>#units</em> property changes the size of an element's text. <br><br>
+        The <strong>text-align:</strong> <em>left | center | right</em> property aligns the text of an element to the left, center, or right. <br><br>
+        The <strong>border: </strong> <em>#units type color</em> property creates a border around an element. <br><br>
+        The <strong>padding: </strong> <em>#units</em> property adds some space around an element, but inside the border. <br><br>
+        The <strong>margin: </strong> <em>#units</em> property adds some space around an element, outside the border. <br><br>
+        <em>#units</em> means a number and a unit of measurement. The unit of measurement can be px (pixels), in (inches),
+        mm (millimeters), cm (centimeters), % (percentage of parent width/height), vw (percentage of screen width), vh (percentage of screen height).
+        For example, you could have <strong>font-size:</strong> <em>30mm</em> which would make the font size 30 millimeters.<br><br>
+        The border <em>type</em> can be solid, dashed, dotted, ridge, or groove.
+        These are some examples of a few style properties:
+    </p>
+    <ul>
+        <li style="color:red">color: red</li>
+        <li style="background-color:lightgreen">background-color: lightgreen</li>
+        <li style="font-family:impact">font-family: impact</li>
+        <li style="font-size:25px">font-size: 25px</li>
+        <li style="text-align:center">text-align: center</li>
+        <li style="border:2px solid black">border: 2px solid black</li>
+    </ul>
+    <p>
+        Or with multiple style properties:
+    </p>
+    <ul>
+        <li style="background-color: lightgreen; padding: 10px">background-color: lightgreen; padding: 10px</li>
+        <li style="color: blue; font-family: impact">color: blue; font-family: impact</li>
+        <li style="padding: 20px; border: 5px ridge yellow; color: white; background-color: blue">padding: 20px; border: 5px ridge yellow; color: white;
+            background-color: blue</li>
+    </ul>
+    <p>These are just a few styles. There's a lot more properties and combinations of styles you can make!</p>
+    <br><button onclick="window.location = '/lessons?num=p'">Previous</button><button onclick="window.location = '/lessons?num=n'" style="float: right">Next</button>
+</body>
+
+</html>

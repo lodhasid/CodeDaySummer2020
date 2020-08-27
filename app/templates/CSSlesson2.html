@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/lessonsCSS.min.css">
+    <script src="/static/lesson.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="icon" href="/static/favicon.png" sizes="256x256" type="image/png">
+    <title>CSS Syntax</title>
+</head>
+
+<body>
+    <div class="header"><img class="home" src="/static/homeIcon.png" onclick="window.location = '/cssTutorial'">
+        <h1>CSS Syntax</h1>
+    </div>
+    <h3>Selectors, Properties, and Values</h3>
+    <p>Internal and External CSS (<a href="/lessons?num=6">inline CSS</a> will not be covered in this tutorial) have this syntax: </p>
+    <pre><code>
+selector {
+    property: value;
+    property2: value2;
+    property3: value3;
+    ...
+}
+
+selector2 {
+    property: value;
+    property2: value2;
+    property3: value3;
+    ...
+} ...
+    </code></pre>
+    <p>Selectors are a way to select which elements that the style applies to. If you want to apply styles to multiple different selectors, seperate the selectors with commas.<br><br> Properties are the names of the styles, like "color", or "font-size".<br><br> Values are the value you want to set to each property; in "font-size: 30px;", the value is "30px". Together, a property and a value make a style rule.</p><br>
+    <button onclick="window.location = '/cssLessons?num=p'" style="float: left">Previous</button><button onclick="window.location = '/cssLessons?num=n'" style="float: right">Next</button>
+</body>

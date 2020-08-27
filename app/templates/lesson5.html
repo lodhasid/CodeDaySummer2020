@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>HTML media</title>
+    <link rel="stylesheet" href="/static/lessonsCSS.min.css">
+    <script src="/static/lesson.js"></script>
+    <link rel="icon" href="/static/fav-2.png" sizes="256x256" type="image/png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <!--
+        maek the id ion underlined.
+
+    -->
+    <div class="header"><img class="home" src="/static/homeIcon.png" onclick="window.location = '/htmlTutorial'">
+        <h1>HTML media</h1>
+    </div>
+    <h3>Images, Videos, and Audio</h3>
+
+    <h4>Images</h4>
+    <p>
+        The &lt;img&gt; tag creates an image. It has no content, so it can be written without a closing tag. <br><br>
+        The &lt;img&gt;'s most important attribute is src. This specifies the source url for the image.<br><br>
+        Another attribute of an image element is alt. If the browser is, for whatever reason, unable to load the image, it
+        will display the text inside the alt attribute.<br><br>
+        Lastly, there is the width and height attributes. They contain a number (in pixels) of the width or height of your image. <strong>Note: </strong> if you only specify one of them, the aspect ratio of your image will be preserved.<br><br>Here's an example of an &lt;img&gt; element:
+    </p>
+    <pre><code id="imgCode"><span class="hidden">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;HTML Example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;</span>
+&lt;img src="/static/image.png" alt="Test Image" width="150"&gt;
+&lt;img src="/static/doesNotExist.png" alt="Test Image" width="150"&gt;<span class="hidden">
+&lt;/html&gt;
+&lt;/body&gt;</span>
+
+</code></pre><button onclick="goToEditor($('#imgCode').text())">See Result</button>
+    <h4>Video &amp; Audio</h4>
+    <p>Next lets talk about the &lt;video&gt; tag. The video tag makes a video that users of your webpage can watch.
+        Inside the video tag, you must put one or more &lt;source&gt; tags. Each &lt;source&gt; tag is an empty element
+        with two important attributes. Src, which, just like the images, is the source of the video, and type, which specifies the video format. <br><br>If your video is a .mp4, then the &lt;source&gt; must have type="video/mp4". If it is a .ogg, then you must write type="video/ogg". Same thing for other video formats. <strong>Note: </strong> if you have multiple &lt;source&gt; tags, the browser will use the first one it finds.</p>
+    <p>The audio tag is almost exactly the same as the video tag, but the &lt;video&gt; becomes &lt;audio&gt;, and the type attribute of the source becomes type="audio/<em>fileFormat</em>", instead of type="video/<em>fileFormat</em>". This will create an audio player on the page that plays the audio in the &lt;source&gt; tag.<br><br><strong>Note: </strong> File formats like .m4a or .mp3 are just written as type="mpeg"</p>
+    <p>Both &lt;video&gt; and &lt;audio&gt; have two important attributes: controls, and autoplay. These attributes are
+        not regular attr="value" attributes. You just need to write the attribute name without the '="value"' part, because they do not have a value.</p>
+    <p>If you include the controls attribute, the audio/video will have a play button, pause button, etc. If you include the autoplay attribute, it will play as soon it loads.<br><br> Examples of video and audio: </p>
+    <pre><code id="audioVideo"><span class="hidden">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;HTML Example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;</span>
+&lt;video width="300" controls&gt;
+    &lt;source src="/static/video.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+&lt;audio width="300" controls&gt;
+    &lt;source src="/static/audio.m4a" type="audio/mpeg"&gt;
+&lt;/audio&gt;<span class="hidden">
+&lt;/body&gt;
+&lt;/html&gt;</span>
+
+</code></pre><button onclick="goToEditor($('#audioVideo').text())">See Result</button>
+    <br><button onclick="window.location = '/lessons?num=p'">Previous</button><button onclick="window.location = '/lessons?num=n'" style="float: right">Next</button>
+</body>
+
+</html>
