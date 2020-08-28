@@ -61,3 +61,7 @@ def formdata():
     for key in data:
         string += ("<br>" + key + "=" + str(data[key]) + "<br>")
     return "Your form was received as: " + string
+
+@app.route("/home")
+def homepage():
+    return render_template("homepage.html")

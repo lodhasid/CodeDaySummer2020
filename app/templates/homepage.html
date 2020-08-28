@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Coding Tutorials!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            font-family: helvetica, arial, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background: linear-gradient(white, #b1afaf) no-repeat;
+        }
+
+        h1 {
+            text-align: center;
+            color: #444;
+        }
+
+        #buttonCont {
+            text-align: center
+        }
+
+        @media screen and (orientation: portrait) {
+            button {
+                width: 90vw;
+                padding: 16vh;
+                margin: 0px 0px
+            }
+        }
+
+        @media screen and (orientation: landscape) {
+            #buttonCont {
+                display: table-row;
+                text-align: center;
+            }
+
+            .btn {
+                display: table-cell;
+            }
+
+            .btn button {
+                width: 45vw;
+                height: 70vh;
+                margin: 2.5vh 2vw
+            }
+        }
+
+        button {
+            background: #71c41d;
+            border: none;
+        }
+
+        button:hover {
+            background: #5fa51a;
+            border: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1 id="header">Coding Tutorials!</h1>
+    <p id="creators">This website and the tutorials were created by Siddhant Lodha, Aarnav Uli, and Aayush Shah</p>
+    <hr>
+    <div id="buttonCont" align="center">
+        <div id="btn1" class="btn">
+            <button onclick="window.location = '/htmlTutorial'">HTML Tutorial</button>
+        </div><br>
+        <div id="btn2" class="btn">
+            <button onclick="window.location = '/cssTutorial'">CSS Tutorial</button>
+        </div>
+    </div>
+</body>
+
+</html>
